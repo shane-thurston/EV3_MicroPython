@@ -11,6 +11,7 @@ left = Motor(Port.B)
 right = Motor(Port.C)
 robot = DriveBase(left,right,56,114)
 
+#drive_time(speed:mm/s, steering:deg/s, time:ms)
 #(90 degrees)
 robot.drive_time(0, 90, 1000)
 robot.stop()
