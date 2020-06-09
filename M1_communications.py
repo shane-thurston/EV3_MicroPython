@@ -14,10 +14,10 @@ right = Motor(Port.C)
 robot = DriveBase(left,right,56,114)
 
 #drive_time(speed:mm/s, steering:deg/s, time:ms)
-#Drive 25cm - 2.5 seconds at 100 speed
-robot.drive_time(100, 0, 3600)
-robot.drive_time(0, -55, 1000)
-robot.drive_time(100, 0, 2500)
+
+robot.drive_time(100, 0, 3600) #Drive forward 36cm
+robot.drive_time(0, -55, 1000) #Turn left
+robot.drive_time(100, 0, 2500) #Drive forward 25cm
 robot.stop()
 
 #You need to perform the same actions in reverse to complete challenge
