@@ -21,5 +21,5 @@ robot.drive_time(100, 0, 1000) #Drive forward 10cm
 
 robot.stop()
 
-#run arm motor
+#run arm motor (speed mm/s, rotational angle)
 arm_motor.run_angle(100,60)
