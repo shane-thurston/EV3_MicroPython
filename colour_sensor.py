@@ -16,4 +16,4 @@ robot = DriveBase(left,right,56,114)
 colour_sensor = ColorSensor(Port.S1)
 while colour_sensor.reflection() < 50:
   robot.drive(200,0)
-robot.stop()
+robot.stop(Stop.BRAKE)
