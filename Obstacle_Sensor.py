@@ -14,6 +14,7 @@ robot = DriveBase(left,right,56,114)
 
 obstacle_sensor = UltrasonicSensor(Port.S4)
 
+# drive(drive_speed, turn_rate)
 robot.drive(200,0)
 while obstacle_sensor.distance() > 300:
     wait(10)
