@@ -15,17 +15,27 @@ right = Motor(Port.B)
 robot = DriveBase(left,right,56,114)
 
 obstacle_sensor = UltrasonicSensor(Port.S4)
+robot.turn(-15)
 robot.straight(300)
 robot.reset()
-while obstacle_sensor.distance() > 500:
+found = False
+search = obstacle_sensor.distance()
+while found == False:
+    ev3.screen.print(str(search))
+    if search < 400:
+        found = True
     robot.turn(-2)
-    wait(15)
+    search = obstacle_sensor.distance()
+    wait(100)
+robot.turn(-15)
 robot.stop()
 ang = robot.angle()
 robot.reset()
+
 # drive(drive_speed, turn_rate)
-robot.drive(100,0)
+robot.drive(50,0)
 while obstacle_sensor.distance() > 100:
+    ev3.screen.print(str(obstacle_sensor.distance()))
     wait(5)
 robot.stop()
 dist = robot.distance()
